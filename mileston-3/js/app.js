@@ -19,59 +19,62 @@ const team = [
   {
     name: 'Wayne Barnett',
     role: 'Founder & CEO',
-    iamge: 'wayne-barnett-founder-ceo.jpg'
+    image: 'wayne-barnett-founder-ceo.jpg'
   },
   {
     name: 'Angela Caroll',
     role: 'Chief Editor',
-    iamge: 'angela-caroll-chief-editor.jpg'
+    image: 'angela-caroll-chief-editor.jpg'
   },
   {
     name: 'Walter Gordon',
     role: 'Office Manager',
-    iamge: 'walter-gordon-office-manager.jpg'
+    image: 'walter-gordon-office-manager.jpg'
   },
   {
     name: 'Angela Lopez',
     role: 'Social Media Manager',
-    iamge: 'angela-lopez-social-media-manager.jpg'
+    image: 'angela-lopez-social-media-manager.jpg'
   },
   {
     name: 'Scott Estrada',
     role: 'Developer',
-    iamge: 'scott-estrada-developer.jpg'
+    image: 'scott-estrada-developer.jpg'
   },
   {
     name: 'Barbara Ramos',
     role: 'Graphic Designer',
-    iamge: 'barbara-ramos-graphic-designer.jpg'
+    image: 'barbara-ramos-graphic-designer.jpg'
   }
 ];
 
-/* Stampare su console le informazioni di nome, ruolo e la stringa della foto */
+// Stampare delle card formattate contenenti immagini e testo
 
-for (let person of team) {
-  for(let index in person) {
-    console.log(`${index}: ${person[index]}`);
-  }
-  console.log('----------------------')
-} 
+const row = document.querySelector('.row');
 
-/* Stampare le stesse informazioni su DOM sotto forma di stringhe */
-const mainWrapper = document.querySelector('.main-wrapper');
-const ol = document.createElement('ol');
+for(let person of team){
 
-for (let person of team) {
-  const li = document.createElement('li');
-  const ul = document.createElement('ul');
-
-  for(let index in person) {
-    const liInner = document.createElement('li');
-    liInner.innerText = `${index}: ${person[index]}`;
-    ul.append(liInner);
+  for(let key in person){
+    
   }
 
-  li.append(ul);
-  ol.append(li);
-  mainWrapper.append(ol);
+  const img = `../assets/img/${person.image}`
+  const name = person.name;
+  const role = person.role;
+
+  const card = `
+    <div class="col col-4 mb-5">
+      <div class="card">
+        <img src="${img}" class="card-img-top" alt="${name}">
+        <div class="card-body">
+          <h5 class="card-title text-center">${name}</h5>
+          <h6 class="text-center">${role}</h5>
+        </div>
+      </div>
+    </div>
+  `;
+
+  row.innerHTML += card;
+
 }
+
