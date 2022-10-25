@@ -49,3 +49,10 @@ const team = [
 ];
 
 /* Stampare su console le informazioni di nome, ruolo e la stringa della foto */
+
+for (let person of team) {
+  for(let index in person) {
+    console.log(`${index}: ${person[index]}`);
+  }
+  console.log('----------------------')
+} 
