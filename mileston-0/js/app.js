@@ -42,8 +42,8 @@ const team = [
     iamge: 'scott-estrada-developer.jpg'
   },
   {
-    name: 'Scott Estrada',
-    role: 'Developer',
-    iamge: 'scott-estrada-developer.jpg'
+    name: 'Barbara Ramos',
+    role: 'Graphic Designer',
+    iamge: 'barbara-ramos-graphic-designer.jpg'
   }
 ];
