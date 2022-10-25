@@ -10,3 +10,40 @@ Stampare delle card formattate contenete immagini e testo (La grafica fornita è
 **BONUS:**
 Aggiungere degli aggettivi (più di uno) che identifichino ogni persona e stamparli nella card
  */
+
+
+
+/* CREAZIONE ARRAY CON LE INFORMAZIONI */
+
+const team = [
+  {
+    name: 'Wayne Barnett',
+    role: 'Founder & CEO',
+    iamge: 'wayne-barnett-founder-ceo.jpg'
+  },
+  {
+    name: 'Angela Caroll',
+    role: 'Chief Editor',
+    iamge: 'angela-caroll-chief-editor.jpg'
+  },
+  {
+    name: 'Walter Gordon',
+    role: 'Office Manager',
+    iamge: 'walter-gordon-office-manager.jpg'
+  },
+  {
+    name: 'Angela Lopez',
+    role: 'Social Media Manager',
+    iamge: 'angela-lopez-social-media-manager.jpg'
+  },
+  {
+    name: 'Scott Estrada',
+    role: 'Developer',
+    iamge: 'scott-estrada-developer.jpg'
+  },
+  {
+    name: 'Scott Estrada',
+    role: 'Developer',
+    iamge: 'scott-estrada-developer.jpg'
+  }
+];
