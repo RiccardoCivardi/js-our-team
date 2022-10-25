@@ -58,10 +58,9 @@ for (let person of team) {
 } 
 
 /* Stampare le stesse informazioni su DOM sotto forma di stringhe */
-const wrapper1 = document.querySelector('.wrapper-1');
+const mainWrapper = document.querySelector('.main-wrapper');
 const ol = document.createElement('ol');
 
-// genero tutti gli elementi
 for (let person of team) {
   const li = document.createElement('li');
   const ul = document.createElement('ul');
@@ -74,34 +73,5 @@ for (let person of team) {
 
   li.append(ul);
   ol.append(li);
-  wrapper1.append(ol);
+  mainWrapper.append(ol);
 }
-
-
-//genero tutto con template litteral contenente l'html 
-const wrapper2 = document.querySelector('.wrapper-2');
-let ol2 = '';
-let listTemplate = '';
-
-for (let person of team) {
-  
-  let li2 = '';
-
-  for(let index in person) {
-    li2 += `<li>${index}: ${person[index]}</li>`
-    
-  }
-  
-  listTemplate += `
-    <li>
-      <ul>
-        ${li2}
-      </ul>        
-    </li>
-  `;
-  
-};
-
-ol2 = `<ol>${listTemplate}</ol>`;
-
-wrapper2.innerHTML += ol2;
