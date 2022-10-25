@@ -58,3 +58,20 @@ for (let person of team) {
 } 
 
 /* Stampare le stesse informazioni su DOM sotto forma di stringhe */
+const mainWrapper = document.querySelector('.main-wrapper');
+const ol = document.createElement('ol');
+
+for (let person of team) {
+  const li = document.createElement('li');
+  const ul = document.createElement('ul');
+
+  for(let index in person) {
+    const liInner = document.createElement('li');
+    liInner.innerText = `${index}: ${person[index]}`;
+    ul.append(liInner);
+  }
+
+  li.append(ul);
+  ol.append(li);
+  mainWrapper.append(ol);
+}
